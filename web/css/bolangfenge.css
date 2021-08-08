@@ -1,0 +1,18 @@
+.header {
+    background-color: #215;
+    background-image: linear-gradient(to bottom, rgba(119, 17, 85, 0.5), transparent);
+    mmin-height: 200px;
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+}
+.canvas-wrap {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+canvas {
+    display: block;
+}
+

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台信息管理</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/styles.css">
+</head>
+
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+    <nav class="navbar page-header">
+        <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <a class="navbar-brand" href="#">
+            <h3>后台信息管理</h3>
+        </a>
+
+        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="small ml-1 d-md-down-none">管理员</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-title">信息模块</li>
+
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="icon icon-user"></i> 用户信息管理
+                        </a>
+                    </li>
+
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="icon icon-energy"></i> 论坛版块管理
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <a href="userinfo.html" class="btn">返回</a>
+            <FORM action="" method="post" id="my-form" style="font-size: 15px">
+                <div><h3>用户信息修改</h3></div>
+
+                <hr />
+                <br>用&nbsp; &nbsp;户&nbsp;&nbsp;名&nbsp;
+                <input id="uName" name="uName" type="text"/>
+                <span id="ruName" style="color: #bd362f" ></span>
+                <br><br>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;
+                <input id="uPassWord" name="uPassWord" type="password"/><span id="ruPassword" style="color: #bd362f"></span>
+                <span id="pwd_prompt" style="color: #bd362f"></span>
+                <br><br>性别 &nbsp;
+                女<input type="radio" name="uSex" value="1">
+                男<input type="radio" name="uSex" value="2" checked="checked" />
+                <br><br/>请选择头像 <br>
+                <img src="image/head/1.gif"/><input type="radio" name="uFace" value="1.gif" checked="checked">
+                <img src="image/head/2.gif"/><input type="radio" name="uFace" value="2.gif">
+                <img src="image/head/3.gif"/><input type="radio" name="uFace" value="3.gif">
+                <img src="image/head/4.gif"/><input type="radio" name="uFace" value="4.gif">
+                <img src="image/head/5.gif"/><input type="radio" name="uFace" value="5.gif">
+                <BR>
+                <img src="image/head/6.gif"/><input type="radio" name="uFace" value="6.gif">
+                <img src="image/head/7.gif"/><input type="radio" name="uFace" value="7.gif">
+                <img src="image/head/8.gif"/><input type="radio" name="uFace" value="8.gif">
+                <img src="image/head/9.gif"/><input type="radio" name="uFace" value="9.gif">
+                <img src="image/head/10.gif"/><input type="radio" name="uFace" value="10.gif">
+                <BR>
+                <img src="image/head/11.gif"/><input type="radio" name="uFace" value="11.gif">
+                <img src="image/head/12.gif"/><input type="radio" name="uFace" value="12.gif">
+                <img src="image/head/13.gif"/><input type="radio" name="uFace" value="13.gif">
+                <img src="image/head/14.gif"/><input type="radio" name="uFace" value="14.gif">
+                <img src="image/head/15.gif"/><input type="radio" name="uFace" value="15.gif">
+                <br>
+                <hr />
+                <INPUT class="btn" tabIndex="4" type="submit" value="修改">
+
+            </FORM>
+        </div>
+    </div>
+</div>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="./js/demo.js"></script>
+<script >
+    $(function(){
+        $name = $(':input[name="uName"]')
+        $name.blur(function(){
+            // alert($name.val())
+            $.get("RegServletAjax", {uName:$name.val()}, function(data, status){
+                // alert(data)
+                // alert(status)
+                $('#ruName').html(data)
+            })
+        })
+    })
+</script>
+<script>
+    $(document).ready(function() {
+        /*用户名验证*/
+        $("#uName").blur(function () {
+            var user = $(this).val();
+            var reg = /^[a-zA-Z0-9]{3,15}$/;
+            if (reg.test(user) == false) {
+                $('#ruName').html("由英文字母和数字组成的4-16位字符，以字母开头");
+                return false;
+            }
+            $("#user_prompt").html("");
+            return true;
+        })
+
+        /*密码验证*/
+        $("#uPassWord").blur(function () {
+            var pwd = $(this).val();
+            var reg = /^[a-zA-Z0-9]{4,10}$/;
+            if (reg.test(pwd) == false) {
+                $("#pwd_prompt").html("长度在4-10之间");
+                return false;
+            }
+            $("#pwd_prompt").html("");
+            return true;
+        })
+    })
+</script>
+</body>
+</html>

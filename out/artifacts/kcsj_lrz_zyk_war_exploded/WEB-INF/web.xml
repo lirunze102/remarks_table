@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>LoginAction</servlet-name>
+        <servlet-class>com.action.LoginAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginAction</servlet-name>
+        <url-pattern>/login.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminLoginAction</servlet-name>
+        <servlet-class>com.action.adminLoginAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminLoginAction</servlet-name>
+        <url-pattern>/adminlogin.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CodeAction</servlet-name>
+        <servlet-class>com.action.CodeAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CodeAction</servlet-name>
+        <url-pattern>/code.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegAction</servlet-name>
+        <servlet-class>com.action.RegAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegAction</servlet-name>
+        <url-pattern>/reg.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewSectionAction</servlet-name>
+        <servlet-class>com.action.NewSectionAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewSectionAction</servlet-name>
+        <url-pattern>/newSection.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewTopicAction</servlet-name>
+        <servlet-class>com.action.NewTopicAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewTopicAction</servlet-name>
+        <url-pattern>/newTopic.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewReplyAction</servlet-name>
+        <servlet-class>com.action.NewReplyAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewReplyAction</servlet-name>
+        <url-pattern>/newReply.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>DeleteReplyAction</servlet-name>
+    <servlet-class>com.action.DeleteReplyAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>DeleteReplyAction</servlet-name>
+    <url-pattern>/deleteReply.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteTopicAction</servlet-name>
+        <servlet-class>com.action.DeleteTopicAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTopicAction</servlet-name>
+        <url-pattern>/deleteTopic.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminDeleteTopic</servlet-name>
+        <servlet-class>com.action.AdminDeleteTopic</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDeleteTopic</servlet-name>
+        <url-pattern>/adminDeleteTopic.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditPersonalAction</servlet-name>
+        <servlet-class>com.action.EditPersonalAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditPersonalAction</servlet-name>
+        <url-pattern>/editPersonal.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteParentSectionAction</servlet-name>
+        <servlet-class>com.action.DeleteParentSectionAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteParentSectionAction</servlet-name>
+        <url-pattern>/deleteParentSection.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteChildSectionAction</servlet-name>
+        <servlet-class>com.action.DeleteChildSectionAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteChildSectionAction</servlet-name>
+        <url-pattern>/deleteChildSection.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeTypeAction</servlet-name>
+        <servlet-class>com.action.ChangeTypeAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeTypeAction</servlet-name>
+        <url-pattern>/changeType.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeParentSectionAction</servlet-name>
+        <servlet-class>com.action.ChangeParentSectionAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeParentSectionAction</servlet-name>
+        <url-pattern>/changeParentSection.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeChildSectionAction</servlet-name>
+        <servlet-class>com.action.ChangeChildSectionAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeChildSectionAction</servlet-name>
+        <url-pattern>/changeChildSection.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReplyPage</servlet-name>
+        <servlet-class>com.action.ReplyPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReplyPage</servlet-name>
+        <url-pattern>/replypage.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+<!--    <filter>-->
+<!--        <filter-name>UserLoginFilter</filter-name>-->
+<!--        <filter-class>filter.UserLoginFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>UserLoginFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+    <servlet>
+        <servlet-name>LogoutAction</servlet-name>
+        <servlet-class>com.action.LogoutAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutAction</servlet-name>
+        <url-pattern>/logout.jhtml</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+</web-app>

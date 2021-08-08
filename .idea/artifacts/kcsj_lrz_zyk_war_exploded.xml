@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="kcsj_lrz&amp;zyk:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/kcsj_lrz_zyk_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="kcsj_lrz&amp;zyk/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="kcsj_lrz&amp;zyk" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

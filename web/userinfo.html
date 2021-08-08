@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台信息管理</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/styles.css">
+</head>
+
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+    <nav class="navbar page-header">
+        <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <a class="navbar-brand" href="#">
+            <h3>后台信息管理</h3>
+        </a>
+
+        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="small ml-1 d-md-down-none">管理员</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-title">信息模块</li>
+
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="icon icon-user"></i> 用户信息管理
+                        </a>
+                    </li>
+
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="icon icon-energy"></i> 论坛版块管理
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="white-box">
+                        <h3 class="box-title">用户信息表</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>用户名</th>
+                                    <th>密码</th>
+                                    <th>性别</th>
+                                    <th>注册时间</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Deshmukh</td>
+                                    <td>Prohaska</td>
+                                    <td>@Genelia</td>
+                                    <td>admin</td>
+                                    <th><a href="#">编辑</a></th>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Deshmukh</td>
+                                    <td>Gaylord</td>
+                                    <td>@Ritesh</td>
+                                    <td>member</td>
+                                    <th><a href="#">编辑</a></th>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sanghani</td>
+                                    <td>Gusikowski</td>
+                                    <td>@Govinda</td>
+                                    <td>developer</td>
+                                    <th><a href="#">编辑</a></th>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Roshan</td>
+                                    <td>Rogahn</td>
+                                    <td>@Hritik</td>
+                                    <td>supporter</td>
+                                    <th><a href="#">编辑</a></th>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Joshi</td>
+                                    <td>Hickle</td>
+                                    <td>@Maruti</td>
+                                    <td>member</td>
+                                    <th><a href="#">编辑</a></th>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Nigam</td>
+                                    <td>Eichmann</td>
+                                    <td>@Sonu</td>
+                                    <td>supporter</td>
+                                    <th><a href="#">编辑</a></th>
+                                </tr>
+                                </tbody>
+                            </table>
+                            共<span id="total_page">3</span>页
+                            <div class="pagination" style="margin-left: 900px">
+                                <a href="#" id="first_page">首页&nbsp&nbsp</a>
+                                <a href="#" id="last_page">上一页&nbsp&nbsp</a>
+                                第&nbsp<span id="the_page">1</span>&nbsp&nbsp页
+                                <a href="#" id="next_page">下一页&nbsp&nbsp</a>
+                                <a href="#" id="end_page">尾页&nbsp&nbsp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="js/userpage.js"></script>
+</body>
+</html>

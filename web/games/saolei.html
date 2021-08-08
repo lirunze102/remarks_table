@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>扫雷</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="../css/saolei.css" />
+
+</head>
+<body>
+	<a href="？">
+		<div class="frame" style="float:right;" >
+			<button class="custom-btn" >返回</button>
+		</div>
+	</a>
+<div class="wrapper">
+<h1>Minesweeper</h1>
+<div id="minesweeper">
+  <ul class="level-select">
+	<li><button data-level="easy">Easy</button></li>
+	<li><button data-level="mid">Medium</button></li>
+	<li><button data-level="hard">Hard</button></li>
+  </ul>
+  <div class="menu">
+	<ul>
+	  <li class="timer">000</li>
+	  <li class="reset"><button> :) </button></li>
+	  <li class="mine-count">010</li>
+	</ul>
+  </div>
+  <div id="mine-grid"></div>
+</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/JSweeper.js"></script>
+
+
+</body>
+</html>

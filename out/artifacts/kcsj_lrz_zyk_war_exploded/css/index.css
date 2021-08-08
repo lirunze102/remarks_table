@@ -1,0 +1,27 @@
+#games{
+    background: honeydew;
+    width: 100% ;
+    height: 300px;
+}
+
+.game{
+    float:left;
+}
+
+#index_body{
+    width:100%;
+    padding-left: 80px;
+
+}
+
+
+#sections{
+    width: 350px;
+    border:1px solid #96c2f1;background:#eefaff
+
+}
+
+#sec_div{
+    float: left;
+}
+
